@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-img{
+  background-image: url('/image/promo1.jpg');
+}
+.promo-1{
+  background-image:url('/image/promp.jpg') ;
+}
+.promo-2{
+  background-image: url('/image/bne.jpg');
+}
+.myDiscount{
+  transform: rotate(-90deg) translate(0,-69px);
+  transform-origin:  100% 0;
+}
