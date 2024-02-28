@@ -33,13 +33,14 @@ const CartCard=(
 
               </div>
               <div  onClick={()=>dispatch(delltem(item.uuid))} className="  lg:hidden mt-2 flex flex-col items-center gap-2">
-              <h3 className="text-sm font-semibold leading-none line-clamp-1 text-myBlackpara"><span>Price:&nbsp;</span>&#36;{item.discount>0 ? item.price-((item.price*item.discount)/100)*item.quantity:item.price*item.quantity}</h3>
+              <h3 className="text-sm font-semibold leading-none line-clamp-1 text-myBlackpara"><span>Price:&nbsp;</span>&#36;{item.discount>0 ? (item.price-(item.price*item.discount)/100)*item.quantity:item.price*item.quantity}</h3>
               <FaTrash className=" text-base font-semibold leading-none line-clamp-1 text-myRed cursor-pointer"/>
           </div>
               </div>
               {/*price and delete*/}
           <div onClick={()=>dispatch(delltem(item.uuid))} className=" hidden lg:flex flex-col items-center gap-5">
-              <h3 className="text-sm font-semibold leading-none line-clamp-1 text-myBlackpara"><span>Price:&nbsp;</span>&#36;{item.discount>0 ? item.price-((item.price*item.discount)/100)*item.quantity:item.price*item.quantity}}</h3>
+              <h3 className="text-sm font-semibold leading-none line-clamp-1 text-myBlackpara">
+                  <span>Price:&nbsp;</span>&#36;{item.discount>0 ? (item.price-(item.price*item.discount)/100)*item.quantity:item.price*item.quantity}</h3>
               <FaTrash className=" text-base font-semibold leading-none line-clamp-1 text-myRed cursor-pointer"/>
           </div>
           </div>
