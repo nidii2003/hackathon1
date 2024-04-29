@@ -23,11 +23,11 @@ const CartCard=(
               </p>
               {/*quntitu*/}
               <div className="flex mt-2 items-center">
-                  <Button className="group hover:bg-myBlackpara bg-myWhite text-myOrange hover:text-myWhite w-fit h-fit rounded-lg text-xs duration-300">
+                  <Button onClick={()=>dispatch(subCart(item))} className="group hover:bg-myBlackpara bg-myWhite text-myOrange hover:text-myWhite w-fit h-fit rounded-lg text-xs duration-300">
               <FaMinus className=" h-2 w-2 group-hover text-myOrange"/>
                   </Button>
                   <div className="mr-2 ml-2 scroll-m-20 text-sm font-semibold text-myBlackpara trackig-tight">1</div>
-                  <Button className="group hover:bg-myBlackpara bg-myWhite text-myOrange hover:text-myWhite w-fit h-fit rounded-lg text-xs duration-300">
+                  <Button  onClick={()=>dispatch(delltem(item.uuid))} className="group hover:bg-myBlackpara bg-myWhite text-myOrange hover:text-myWhite w-fit h-fit rounded-lg text-xs duration-300">
               <FaPlus className=" h-2 w-2 group-hover text-myOrange"/>
                   </Button>
 
