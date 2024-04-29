@@ -21,7 +21,7 @@ export const products:Product[]=[
         description: "Best quality tee-shirt for women",
         price: 150,
         category: "tops",
-        slug: "Black top",
+        slug: "Black-top",
     
         discount:10,
         size:["S","XL","L"],
