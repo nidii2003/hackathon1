@@ -37,7 +37,7 @@ export const cartSlice = createSlice({
   subCart(state,action){ let obj=state.find((val)=>val.id==action.payload.id&&
     val.color==action.payload.color
   && val.size==action.payload.size);
-  if (obj!==undefined){
+  if (obj!=undefined){
     if(obj.quantity<=1){
 return state.filter((val)=>val.uuid!==obj.uuid);
     }
