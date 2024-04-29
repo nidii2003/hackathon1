@@ -28,7 +28,7 @@ export const cartSlice = createSlice({
   && val.size==action.payload.size);
   if(obj){
     ++obj.quantity;
-    let newstate=state.filter((val) =>val.id!==obj?.id);
+    let newstate=state.filter((val) =>val.id!=obj?.id);
     state=[...newstate,obj];
     return;
   }
@@ -39,7 +39,7 @@ export const cartSlice = createSlice({
   && val.size==action.payload.size);
   if (obj!=undefined){
     if(obj.quantity<=1){
-return state.filter((val)=>val.uuid!==obj.uuid);
+return state.filter((val)=>val.uuid!=obj.uuid);
     }
     --obj.quantity;
     let newstate=state.filter((value)=>value.uuid==obj.uuid)
