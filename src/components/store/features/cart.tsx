@@ -22,9 +22,35 @@ export const cartSlice = createSlice({
   delltem(state,{payload}){
     return state.filter((val)=>val.uuid!==payload);
   },
+     addCart(state,action){
+    let obj=state.find((val)=>val.id==action.payload.id&&
+    val.color==action.payload.color
+  && val.size==action.payload.size);
+  if(obj){
+    ++obj.quantity;
+    let newstate=state.filter((val) =>val.id!==obj?.id);
+    state=[...newstate,obj];
+    return;
+  }
+  },
+  //subtraction of item
+  subCart(state,action){ let obj=state.find((val)=>val.id==action.payload.id&&
+    val.color==action.payload.color
+  && val.size==action.payload.size);
+  if (obj!==undefined){
+    if(obj.quantity<=1){
+return state.filter((val)=>val.uuid!==obj.uuid);
+    }
+    --obj.quantity;
+    let newstate=state.filter((value)=>value.uuid==obj.uuid)
+    state =[...newstate,obj]
+    return;
+  }
+
+  }
 },
  })
 
-export const { addToCart ,delltem} = cartSlice.actions
+export const { addToCart ,delltem,addcart,subCart} = cartSlice.actions
 
 export default cartSlice.reducer
