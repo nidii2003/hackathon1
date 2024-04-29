@@ -27,7 +27,7 @@ const CartCard=(
               <FaMinus className=" h-2 w-2 group-hover text-myOrange"/>
                   </Button>
                   <div className="mr-2 ml-2 scroll-m-20 text-sm font-semibold text-myBlackpara trackig-tight">1</div>
-                  <Button  onClick={()=>dispatch(delltem(item.uuid))} className="group hover:bg-myBlackpara bg-myWhite text-myOrange hover:text-myWhite w-fit h-fit rounded-lg text-xs duration-300">
+                  <Button  onClick={()=>dispatch(addCart(item))} className="group hover:bg-myBlackpara bg-myWhite text-myOrange hover:text-myWhite w-fit h-fit rounded-lg text-xs duration-300">
               <FaPlus className=" h-2 w-2 group-hover text-myOrange"/>
                   </Button>
 
